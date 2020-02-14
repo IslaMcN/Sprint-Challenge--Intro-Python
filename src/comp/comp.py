@@ -34,22 +34,44 @@ print(a)
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
 print("Ends with e:")
-b = [x for x in humans if x.name[-1] == 'e']
+b = []
+for x in humans:
+    if x.name[-1] == 'e':
+        b1 = f'{x.name}'
+        b.append(b1)
 print(b)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
 print("Starts between C and G, inclusive:")
-c = [a]
-c2 = [x for x in humans if x.name[0] == 'F']
-c3 = [x for x in humans if x.name[0] == 'E']
-c.append(c2)
-c.append(c3)
+c = []
+
+for x in humans:
+    if x.name[0] == 'D':
+        c5 = f'{x.name}'
+        c.append(c5)
+    if x.name[0] == 'C':
+        c1 = f'{x.name}'
+        c.append(c1)
+    if x.name[0] == 'F':
+        c2 = f'{x.name}'
+        c.append(c2)
+    if x.name[0] == 'E':
+        c3 = f'{x.name}'
+        c.append(c3)
+    if x.name[0] == 'G':
+        c4 = f'{x.name}'
+        c.append(c4)
 print(c)
 
 # Write a list comprehension that creates a list of all the ages plus 10.
 print("Ages plus 10:")
-d = [x for x in humans if x.age >= 10]
+d = []
+for x in humans:
+    if x.age >= 10:
+        d1 = x.age + 10
+       
+        d.append(d1)
 print(d)
 
 # Write a list comprehension that creates a list of strings which are the name
@@ -57,7 +79,7 @@ print(d)
 print("Name hyphen age:")
 e = []
 for x in humans:
-    e1 = f'{x.name} - {x.age}'
+    e1 = f'{x.name}-{x.age}'
     e.append(e1)
 print(e)
 
@@ -68,11 +90,10 @@ print("Names and ages between 27 and 32:")
 f = []
 for x in humans:
     if x.age <= 32:
-        if x.age >=27:
-            f1 = f'{x.name}, {x.age}'
+        if x.age > 27:
+            f1 = (f'{x.name}, {x.age}')
             f.append(f1)
-        else:
-            break
+
 print(f)
 
 # Write a list comprehension that creates a list of new Humans like the old
@@ -81,8 +102,8 @@ print(f)
 print("All names uppercase:")
 g = []
 for x in humans:
-    x1 = x.name.upper()
-    g.append(x1)
+    g1 = f'{x.name.upper()}, {x.age}'
+    g.append(g1)
 print(g)
 
 # Write a list comprehension that contains the square root of all the ages.
